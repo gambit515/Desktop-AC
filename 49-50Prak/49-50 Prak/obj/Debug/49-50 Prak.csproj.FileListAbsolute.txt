@@ -1,0 +1,24 @@
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\bin\Debug\49-50 Prak.exe.config
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\bin\Debug\49-50 Prak.exe
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\bin\Debug\49-50 Prak.pdb
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\49-50 Prak.csproj.AssemblyReference.cache
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\49-50 Prak.csproj.SuggestedBindingRedirects.cache
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\_49_50_Prak.Properties.Resources.resources
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\_49_50_Prak.Reg.resources
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\49-50 Prak.csproj.GenerateResource.cache
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\49-50 Prak.csproj.CoreCompileInputs.cache
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\49-50 Prak.exe
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\49-50 Prak.pdb
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\_49_50_Prak.Form1.resources
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\_49_50_Prak.Main.resources
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\_49_50_Prak.Profile.resources
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\_49_50_Prak.Admin.resources
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\_49_50_Prak.Shifr.resources
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\bin\Debug\GambitLib.dll
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\bin\Debug\GambitLib.pdb
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\49-50 Prak.csproj.CopyComplete
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\_49_50_Prak.OperationForm.resources
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\_49_50_Prak.Confirmation.resources
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\_49_50_Prak.TovarForm.resources
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\_49_50_Prak.ProviderForm.resources
+C:\Users\Gambit\source\repos\49-50 Prak\49-50 Prak\obj\Debug\_49_50_Prak.KolvoForm.resources

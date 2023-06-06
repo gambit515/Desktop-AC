@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Operations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Operation_list>
+    <Operation>
+      <Id_>0</Id_>
+      <Articul_>5</Articul_>
+      <Prihod_Rashod_>2023-05-29T14:48:29.3447032+07:00</Prihod_Rashod_>
+      <Cost_>60</Cost_>
+      <Kolvo_>500</Kolvo_>
+      <OperationCode_>1</OperationCode_>
+      <Other_>2</Other_>
+    </Operation>
+    <Operation>
+      <Id_>1</Id_>
+      <Articul_>1</Articul_>
+      <Prihod_Rashod_>2023-05-29T14:54:14.5827483+07:00</Prihod_Rashod_>
+      <Cost_>50</Cost_>
+      <Kolvo_>5</Kolvo_>
+      <OperationCode_>2</OperationCode_>
+      <Other_>amoskin515@gmail.com</Other_>
+    </Operation>
+    <Operation>
+      <Id_>2</Id_>
+      <Articul_>5</Articul_>
+      <Prihod_Rashod_>2023-05-29T14:54:14.5847105+07:00</Prihod_Rashod_>
+      <Cost_>60</Cost_>
+      <Kolvo_>1</Kolvo_>
+      <OperationCode_>2</OperationCode_>
+      <Other_>amoskin515@gmail.com</Other_>
+    </Operation>
+  </Operation_list>
+</Operations>

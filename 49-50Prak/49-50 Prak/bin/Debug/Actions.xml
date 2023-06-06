@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Actions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Action_list>
+    <Action>
+      <Email>fSBYpMRZXuYmlhCvDIePRFLcgAp5Uxi8uKHOd5joxEkrN7W9MFRCe8WDGCYK2opBG5bWhpvLbG7nzs0m7kqCqOk7bQLfGu7HT3nNRYaekl5phl5SVi3g/cHXPlmzp7S17O3fbxSjYsf4kkQhRZ0oixVDsq0fdkopUb/Yxa/hSGE=</Email>
+      <Password>OxByTsHP8D6R+rWIqaCZLs5W80w1cacm7GRilIw4c/WUWSNTVFkeKndoYZMV7Nqh/N/utC6s0Ql//d4MMXniDH5Sngvcpd5JxeDjBXavpt8Jwm+BNywnW/0OqdrvbRjcw49aezx5/woUcqZ53Hnb6KhYavyPzcD4r0mZcSDsltY=</Password>
+      <Name>Alex</Name>
+      <SureName>Amoskin</SureName>
+      <Sex>Мужской</Sex>
+      <Admin>false</Admin>
+      <BirthDate>2004-08-28T14:37:45</BirthDate>
+      <Country>Россия</Country>
+    </Action>
+    <Action>
+      <Email>O9BIx8QuXXDf82QuxJqsehjeO4RmDAo+yBWzGzjf9HGdP0CxD+CsjIrYxQe9Dm7kJDHGkU4L3+vNZgS8oovlGZELdj5V/NQNIqQaG8hu8yKDSXJ/YC0jnE5Xglkoh/GyCuQXxjXBUM/UWk/Wvhn8CB5XLqwlJ5huQaFq222ECPU=</Email>
+      <Password>eGtgS4VuTZWHAChGSc2axkCm4UypvzD8J1Rp26+eKKR6/giDqlneoCrfRTyWs5VzwVfemz2dPJIRUzc0JkImnLd4uknXvp11B26gJ2OjN8+OCunLbru6UJISATVY1sTnjxDBQSepaU3rKO/d34f0tt6gKvV/GDsiExqpj1W90ik=</Password>
+      <Name>Alex</Name>
+      <SureName>Amoskin</SureName>
+      <Sex>Мужской</Sex>
+      <Admin>true</Admin>
+      <BirthDate>2004-08-28T14:38:22</BirthDate>
+      <Country>Россия</Country>
+    </Action>
+    <Action>
+      <Email>NbRutRV7O89uBtMNbRZpXBTtC061ZU1tlafWNZnEJIHlHNShKppIzRuEY4SBlbqRu0uN1OTcHkGQs2b3wMywZaLXQuzhRySC0ixuEHXPEmw0iX1YZPaz9IQegwNSV34m6bk287JsbLwlyeGqqcgt0jSkrNxgq49iiidz52WZ1B8=</Email>
+      <Password>LCCMhb2tdZM6Angn6iFUu+r4yxvFQrvstpOyQ2Ta7Oqj4vpIxizyNHkAZYs8d0JVi4aIsJNah41/rfi16Bn74Ca7s+7j78tkPuZJy4qB3y0rkVbSIOTurHhkpo0aF2wYylggjFeurleUNy7mTen6qj66um7fVxQGpM1A3n4NW1Q=</Password>
+      <Name>Alex</Name>
+      <SureName>Amoskin</SureName>
+      <Sex>Мужской</Sex>
+      <Admin>true</Admin>
+      <BirthDate>2004-08-28T15:04:14</BirthDate>
+      <Country>Россия</Country>
+    </Action>
+  </Action_list>
+</Actions>

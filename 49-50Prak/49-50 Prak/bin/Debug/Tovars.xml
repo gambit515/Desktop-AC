@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Tovars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Tovar_list>
+    <Tovar>
+      <Articul_>3</Articul_>
+      <Name_>Гайка 5мм</Name_>
+      <PNG_>C:\\Users\\Gambit\\Downloads\\Gaika.jpg</PNG_>
+      <CostRoznicha_>5</CostRoznicha_>
+      <Kolvo_>1000</Kolvo_>
+    </Tovar>
+    <Tovar>
+      <Articul_>2</Articul_>
+      <Name_>Стартер</Name_>
+      <PNG_>C:\\Users\\Gambit\\Downloads\\starters.jpg</PNG_>
+      <CostRoznicha_>15000</CostRoznicha_>
+      <Kolvo_>1500</Kolvo_>
+    </Tovar>
+    <Tovar>
+      <Articul_>4</Articul_>
+      <Name_>Припой</Name_>
+      <PNG_>C:\\Users\\Gambit\\Downloads\\Припой.jpg</PNG_>
+      <CostRoznicha_>60</CostRoznicha_>
+      <Kolvo_>100</Kolvo_>
+    </Tovar>
+    <Tovar>
+      <Articul_>1</Articul_>
+      <Name_>Подшипники</Name_>
+      <PNG_>C:\\Users\\Gambit\\Downloads\\podship.jpg</PNG_>
+      <CostRoznicha_>50</CostRoznicha_>
+      <Kolvo_>490</Kolvo_>
+    </Tovar>
+    <Tovar>
+      <Articul_>5</Articul_>
+      <Name_>Отвёртка</Name_>
+      <PNG_>C:\\Users\\Gambit\\Downloads\\Отвёртка.jpg</PNG_>
+      <CostRoznicha_>60</CostRoznicha_>
+      <Kolvo_>499</Kolvo_>
+    </Tovar>
+  </Tovar_list>
+</Tovars>
