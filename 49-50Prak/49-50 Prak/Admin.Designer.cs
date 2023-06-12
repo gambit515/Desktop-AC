@@ -92,6 +92,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button24 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.textBoxProvider7 = new System.Windows.Forms.TextBox();
@@ -117,6 +118,28 @@
             this.textBoxProvider4 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.button25 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.listView5 = new System.Windows.Forms.ListView();
+            this.button27 = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textBoxStatistic3 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBoxStatistic1 = new System.Windows.Forms.TextBox();
+            this.textBoxStatistic2 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBoxStatistic4 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.textBoxFilter1 = new System.Windows.Forms.TextBox();
+            this.textBoxFilter2 = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -125,6 +148,9 @@
             this.groupBox2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView1
@@ -205,6 +231,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(3, -2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -229,6 +256,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button26);
             this.tabPage2.Controls.Add(this.textBoxOperation6);
             this.tabPage2.Controls.Add(this.button22);
             this.tabPage2.Controls.Add(this.button23);
@@ -485,11 +513,11 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(158, 6);
+            this.button6.Location = new System.Drawing.Point(125, 38);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(94, 26);
+            this.button6.Size = new System.Drawing.Size(128, 26);
             this.button6.TabIndex = 3;
-            this.button6.Text = "Поиск";
+            this.button6.Text = "Фильтровать";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -497,16 +525,16 @@
             // 
             this.textBoxOperationSearch.Location = new System.Drawing.Point(6, 6);
             this.textBoxOperationSearch.Name = "textBoxOperationSearch";
-            this.textBoxOperationSearch.Size = new System.Drawing.Size(146, 26);
+            this.textBoxOperationSearch.Size = new System.Drawing.Size(247, 26);
             this.textBoxOperationSearch.TabIndex = 2;
             // 
             // listView2
             // 
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(6, 40);
+            this.listView2.Location = new System.Drawing.Point(6, 72);
             this.listView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(246, 377);
+            this.listView2.Size = new System.Drawing.Size(246, 345);
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.List;
@@ -514,6 +542,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button25);
             this.tabPage3.Controls.Add(this.button20);
             this.tabPage3.Controls.Add(this.button21);
             this.tabPage3.Controls.Add(this.textBoxTovar2);
@@ -571,10 +600,10 @@
             // listView3
             // 
             this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(6, 40);
+            this.listView3.Location = new System.Drawing.Point(6, 73);
             this.listView3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(246, 377);
+            this.listView3.Size = new System.Drawing.Size(246, 344);
             this.listView3.TabIndex = 32;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.List;
@@ -592,16 +621,16 @@
             // 
             this.textBoxTovarSearch.Location = new System.Drawing.Point(6, 6);
             this.textBoxTovarSearch.Name = "textBoxTovarSearch";
-            this.textBoxTovarSearch.Size = new System.Drawing.Size(146, 26);
+            this.textBoxTovarSearch.Size = new System.Drawing.Size(246, 26);
             this.textBoxTovarSearch.TabIndex = 33;
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(158, 6);
+            this.button13.Location = new System.Drawing.Point(127, 39);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(94, 26);
+            this.button13.Size = new System.Drawing.Size(125, 26);
             this.button13.TabIndex = 34;
-            this.button13.Text = "Поиск";
+            this.button13.Text = "Фильтровать";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
@@ -761,9 +790,11 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button24);
             this.tabPage4.Controls.Add(this.button19);
             this.tabPage4.Controls.Add(this.button18);
             this.tabPage4.Controls.Add(this.textBoxProvider7);
+            this.tabPage4.Controls.Add(this.button14);
             this.tabPage4.Controls.Add(this.label17);
             this.tabPage4.Controls.Add(this.label18);
             this.tabPage4.Controls.Add(this.textBoxProvider6);
@@ -771,7 +802,6 @@
             this.tabPage4.Controls.Add(this.listView4);
             this.tabPage4.Controls.Add(this.textBoxProvider5);
             this.tabPage4.Controls.Add(this.textBoxProviderSearch);
-            this.tabPage4.Controls.Add(this.button14);
             this.tabPage4.Controls.Add(this.groupBox3);
             this.tabPage4.Controls.Add(this.label7);
             this.tabPage4.Controls.Add(this.button15);
@@ -790,6 +820,16 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Поставщики";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(6, 41);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(117, 26);
+            this.button24.TabIndex = 74;
+            this.button24.Text = "Поиск";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button19
             // 
@@ -856,10 +896,10 @@
             // listView4
             // 
             this.listView4.HideSelection = false;
-            this.listView4.Location = new System.Drawing.Point(6, 40);
+            this.listView4.Location = new System.Drawing.Point(6, 75);
             this.listView4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(246, 369);
+            this.listView4.Size = new System.Drawing.Size(246, 334);
             this.listView4.TabIndex = 51;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.List;
@@ -875,18 +915,18 @@
             // 
             // textBoxProviderSearch
             // 
-            this.textBoxProviderSearch.Location = new System.Drawing.Point(6, 6);
+            this.textBoxProviderSearch.Location = new System.Drawing.Point(6, 9);
             this.textBoxProviderSearch.Name = "textBoxProviderSearch";
-            this.textBoxProviderSearch.Size = new System.Drawing.Size(146, 26);
+            this.textBoxProviderSearch.Size = new System.Drawing.Size(246, 26);
             this.textBoxProviderSearch.TabIndex = 52;
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(158, 6);
+            this.button14.Location = new System.Drawing.Point(125, 41);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(94, 26);
+            this.button14.Size = new System.Drawing.Size(127, 26);
             this.button14.TabIndex = 53;
-            this.button14.Text = "Поиск";
+            this.button14.Text = "Фильтровать";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
@@ -1030,6 +1070,215 @@
             this.label16.TabIndex = 63;
             this.label16.Text = "Страна";
             // 
+            // button25
+            // 
+            this.button25.Location = new System.Drawing.Point(6, 39);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(115, 26);
+            this.button25.TabIndex = 76;
+            this.button25.Text = "Поиск";
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
+            // 
+            // button26
+            // 
+            this.button26.Location = new System.Drawing.Point(6, 38);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(113, 26);
+            this.button26.TabIndex = 77;
+            this.button26.Text = "Поиск";
+            this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.groupBox5);
+            this.tabPage5.Controls.Add(this.groupBox4);
+            this.tabPage5.Controls.Add(this.button27);
+            this.tabPage5.Controls.Add(this.listView5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(778, 480);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Статистика покупок";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // listView5
+            // 
+            this.listView5.HideSelection = false;
+            this.listView5.Location = new System.Drawing.Point(6, 37);
+            this.listView5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listView5.Name = "listView5";
+            this.listView5.Size = new System.Drawing.Size(246, 433);
+            this.listView5.TabIndex = 52;
+            this.listView5.UseCompatibleStateImageBehavior = false;
+            this.listView5.View = System.Windows.Forms.View.List;
+            this.listView5.SelectedIndexChanged += new System.EventHandler(this.listView5_SelectedIndexChanged);
+            // 
+            // button27
+            // 
+            this.button27.Location = new System.Drawing.Point(5, 3);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(247, 26);
+            this.button27.TabIndex = 54;
+            this.button27.Text = "Фильтровать";
+            this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBoxFilter2);
+            this.groupBox4.Controls.Add(this.textBoxFilter1);
+            this.groupBox4.Controls.Add(this.dateTimePicker4);
+            this.groupBox4.Controls.Add(this.dateTimePicker3);
+            this.groupBox4.Controls.Add(this.checkBox2);
+            this.groupBox4.Controls.Add(this.label31);
+            this.groupBox4.Controls.Add(this.label22);
+            this.groupBox4.Location = new System.Drawing.Point(259, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(263, 243);
+            this.groupBox4.TabIndex = 55;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Фильтры";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(69, 109);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(130, 20);
+            this.label22.TabIndex = 72;
+            this.label22.Text = "Артикул товара";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textBoxStatistic4);
+            this.groupBox5.Controls.Add(this.label30);
+            this.groupBox5.Controls.Add(this.textBoxStatistic3);
+            this.groupBox5.Controls.Add(this.label27);
+            this.groupBox5.Controls.Add(this.textBoxStatistic1);
+            this.groupBox5.Controls.Add(this.textBoxStatistic2);
+            this.groupBox5.Controls.Add(this.label28);
+            this.groupBox5.Controls.Add(this.label29);
+            this.groupBox5.Location = new System.Drawing.Point(526, 12);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(240, 249);
+            this.groupBox5.TabIndex = 56;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Данные о покупке";
+            // 
+            // textBoxStatistic3
+            // 
+            this.textBoxStatistic3.Location = new System.Drawing.Point(6, 155);
+            this.textBoxStatistic3.Name = "textBoxStatistic3";
+            this.textBoxStatistic3.Size = new System.Drawing.Size(200, 26);
+            this.textBoxStatistic3.TabIndex = 16;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(2, 132);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(100, 20);
+            this.label27.TabIndex = 15;
+            this.label27.Text = "Количество";
+            // 
+            // textBoxStatistic1
+            // 
+            this.textBoxStatistic1.Location = new System.Drawing.Point(6, 49);
+            this.textBoxStatistic1.Name = "textBoxStatistic1";
+            this.textBoxStatistic1.Size = new System.Drawing.Size(200, 26);
+            this.textBoxStatistic1.TabIndex = 15;
+            // 
+            // textBoxStatistic2
+            // 
+            this.textBoxStatistic2.Location = new System.Drawing.Point(6, 101);
+            this.textBoxStatistic2.Name = "textBoxStatistic2";
+            this.textBoxStatistic2.Size = new System.Drawing.Size(200, 26);
+            this.textBoxStatistic2.TabIndex = 14;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(2, 78);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(72, 20);
+            this.label28.TabIndex = 13;
+            this.label28.Text = "Артикул";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(2, 26);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(48, 20);
+            this.label29.TabIndex = 11;
+            this.label29.Text = "Дата";
+            // 
+            // textBoxStatistic4
+            // 
+            this.textBoxStatistic4.Location = new System.Drawing.Point(6, 217);
+            this.textBoxStatistic4.Name = "textBoxStatistic4";
+            this.textBoxStatistic4.Size = new System.Drawing.Size(200, 26);
+            this.textBoxStatistic4.TabIndex = 18;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(2, 194);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(100, 20);
+            this.label30.TabIndex = 17;
+            this.label30.Text = "Покупатель";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(11, 25);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(198, 24);
+            this.checkBox2.TabIndex = 73;
+            this.checkBox2.Text = "Фильтровать по дате";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(9, 47);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(248, 26);
+            this.dateTimePicker3.TabIndex = 74;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Location = new System.Drawing.Point(9, 79);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(248, 26);
+            this.dateTimePicker4.TabIndex = 75;
+            // 
+            // textBoxFilter1
+            // 
+            this.textBoxFilter1.Location = new System.Drawing.Point(11, 132);
+            this.textBoxFilter1.Name = "textBoxFilter1";
+            this.textBoxFilter1.Size = new System.Drawing.Size(246, 26);
+            this.textBoxFilter1.TabIndex = 19;
+            // 
+            // textBoxFilter2
+            // 
+            this.textBoxFilter2.Location = new System.Drawing.Point(6, 188);
+            this.textBoxFilter2.Name = "textBoxFilter2";
+            this.textBoxFilter2.Size = new System.Drawing.Size(246, 26);
+            this.textBoxFilter2.TabIndex = 76;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(82, 165);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(100, 20);
+            this.label31.TabIndex = 72;
+            this.label31.Text = "Покупатель";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1055,6 +1304,11 @@
             this.tabPage4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1150,5 +1404,28 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.ListView listView5;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox textBoxStatistic4;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBoxStatistic3;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox textBoxStatistic1;
+        private System.Windows.Forms.TextBox textBoxStatistic2;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox textBoxFilter2;
+        private System.Windows.Forms.TextBox textBoxFilter1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Label label31;
     }
 }

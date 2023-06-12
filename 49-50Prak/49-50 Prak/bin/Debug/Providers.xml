@@ -2,15 +2,6 @@
 <Providers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Provider_list>
     <Provider>
-      <Number_>2</Number_>
-      <Name_>ООО Лента</Name_>
-      <Country_>Россия</Country_>
-      <City_>Красноярск</City_>
-      <Street_>Вязов</Street_>
-      <Phone_>8(983)-297-05-36</Phone_>
-      <FIO_>Амоскин Александр Федорович</FIO_>
-    </Provider>
-    <Provider>
       <Number_>3</Number_>
       <Name_>ООО Холодец Молодец</Name_>
       <Country_>Россия</Country_>
@@ -27,6 +18,15 @@
       <Street_>Комсомольский</Street_>
       <Phone_>898392970536</Phone_>
       <FIO_>Амоскина Татьяна Федоровна</FIO_>
+    </Provider>
+    <Provider>
+      <Number_>2</Number_>
+      <Name_>ООО Лента</Name_>
+      <Country_>Россия</Country_>
+      <City_>Москва</City_>
+      <Street_>Вязов</Street_>
+      <Phone_>8(983)-297-05-36</Phone_>
+      <FIO_>Амоскин Александр Федорович</FIO_>
     </Provider>
   </Provider_list>
 </Providers>

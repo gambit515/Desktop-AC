@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -65,8 +66,26 @@
             this.textBoxKorzina2 = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.listViewHistory = new System.Windows.Forms.ListView();
             this.button10 = new System.Windows.Forms.Button();
+            this.listViewHistory = new System.Windows.Forms.ListView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxHistorySearch1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxHistoryFilter1 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxHistoryData2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxHistoryData1 = new System.Windows.Forms.TextBox();
+            this.textBoxHistoryData3 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -79,6 +98,8 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKorzina1)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -472,6 +493,12 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.groupBox2);
+            this.tabPage4.Controls.Add(this.button12);
+            this.tabPage4.Controls.Add(this.button11);
+            this.tabPage4.Controls.Add(this.label6);
+            this.tabPage4.Controls.Add(this.textBoxHistorySearch1);
+            this.tabPage4.Controls.Add(this.groupBox1);
             this.tabPage4.Controls.Add(this.button10);
             this.tabPage4.Controls.Add(this.listViewHistory);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
@@ -480,27 +507,195 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "История покупок";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // listViewHistory
-            // 
-            this.listViewHistory.HideSelection = false;
-            this.listViewHistory.Location = new System.Drawing.Point(9, 5);
-            this.listViewHistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.listViewHistory.Name = "listViewHistory";
-            this.listViewHistory.Size = new System.Drawing.Size(246, 402);
-            this.listViewHistory.TabIndex = 3;
-            this.listViewHistory.UseCompatibleStateImageBehavior = false;
-            this.listViewHistory.View = System.Windows.Forms.View.List;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(262, 5);
+            this.button10.Location = new System.Drawing.Point(301, 271);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(97, 28);
             this.button10.TabIndex = 4;
             this.button10.Text = "Обновить";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // listViewHistory
+            // 
+            this.listViewHistory.HideSelection = false;
+            this.listViewHistory.Location = new System.Drawing.Point(9, 97);
+            this.listViewHistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listViewHistory.Name = "listViewHistory";
+            this.listViewHistory.Size = new System.Drawing.Size(246, 310);
+            this.listViewHistory.TabIndex = 3;
+            this.listViewHistory.UseCompatibleStateImageBehavior = false;
+            this.listViewHistory.View = System.Windows.Forms.View.List;
+            this.listViewHistory.SelectedIndexChanged += new System.EventHandler(this.listViewHistory_SelectedIndexChanged);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBoxHistoryFilter1);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Location = new System.Drawing.Point(262, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(224, 195);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Параметры фильтра";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Дата";
+            // 
+            // textBoxHistorySearch1
+            // 
+            this.textBoxHistorySearch1.Location = new System.Drawing.Point(12, 31);
+            this.textBoxHistorySearch1.Name = "textBoxHistorySearch1";
+            this.textBoxHistorySearch1.Size = new System.Drawing.Size(243, 26);
+            this.textBoxHistorySearch1.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 5);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 20);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Поиск по имени";
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(12, 63);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(119, 28);
+            this.button11.TabIndex = 8;
+            this.button11.Text = "Поиск";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button12.Location = new System.Drawing.Point(137, 63);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(118, 28);
+            this.button12.TabIndex = 9;
+            this.button12.Text = "Фильтровать";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(10, 49);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 2;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(60, 25);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(135, 24);
+            this.checkBox1.TabIndex = 3;
+            this.checkBox1.Text = "использовать";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 78);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 20);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Артикул";
+            // 
+            // textBoxHistoryFilter1
+            // 
+            this.textBoxHistoryFilter1.Location = new System.Drawing.Point(10, 101);
+            this.textBoxHistoryFilter1.Name = "textBoxHistoryFilter1";
+            this.textBoxHistoryFilter1.Size = new System.Drawing.Size(200, 26);
+            this.textBoxHistoryFilter1.TabIndex = 10;
+            this.textBoxHistoryFilter1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBoxHistoryData3);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.textBoxHistoryData1);
+            this.groupBox2.Controls.Add(this.textBoxHistoryData2);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Location = new System.Drawing.Point(492, 5);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(240, 195);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Данные о покупке";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // textBoxHistoryData2
+            // 
+            this.textBoxHistoryData2.Location = new System.Drawing.Point(6, 101);
+            this.textBoxHistoryData2.Name = "textBoxHistoryData2";
+            this.textBoxHistoryData2.Size = new System.Drawing.Size(200, 26);
+            this.textBoxHistoryData2.TabIndex = 14;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(2, 78);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(72, 20);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Артикул";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(2, 26);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(48, 20);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Дата";
+            // 
+            // textBoxHistoryData1
+            // 
+            this.textBoxHistoryData1.Location = new System.Drawing.Point(6, 49);
+            this.textBoxHistoryData1.Name = "textBoxHistoryData1";
+            this.textBoxHistoryData1.Size = new System.Drawing.Size(200, 26);
+            this.textBoxHistoryData1.TabIndex = 15;
+            // 
+            // textBoxHistoryData3
+            // 
+            this.textBoxHistoryData3.Location = new System.Drawing.Point(6, 155);
+            this.textBoxHistoryData3.Name = "textBoxHistoryData3";
+            this.textBoxHistoryData3.Size = new System.Drawing.Size(200, 26);
+            this.textBoxHistoryData3.TabIndex = 16;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(2, 132);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(100, 20);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Количество";
             // 
             // Main
             // 
@@ -528,6 +723,11 @@
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKorzina1)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -573,5 +773,23 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.ListView listViewHistory;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxHistorySearch1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBoxHistoryFilter1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBoxHistoryData1;
+        private System.Windows.Forms.TextBox textBoxHistoryData2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxHistoryData3;
+        private System.Windows.Forms.Label label13;
     }
 }

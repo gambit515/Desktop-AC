@@ -44,8 +44,8 @@ namespace _49_50_Prak
         private void button2_Click(object sender, EventArgs e)
         {
             //Form form = new Main("amoskin515@gmail.com", "какашка");
-            //Form form = new Admin("amoskin3515@gmail.com");
-            //form.ShowDialog();
+            Form form = new Admin("amoskin3515@gmail.com");
+            form.ShowDialog();
             if (!IsBanned)
                 if(textBox3.Text == text)
                 {

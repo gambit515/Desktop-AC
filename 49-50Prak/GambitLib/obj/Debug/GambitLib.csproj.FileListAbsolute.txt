@@ -1,0 +1,6 @@
+C:\Users\Gambit\source\repos\49-50 Prak\GambitLib\bin\Debug\GambitLib.dll
+C:\Users\Gambit\source\repos\49-50 Prak\GambitLib\bin\Debug\GambitLib.pdb
+C:\Users\Gambit\source\repos\49-50 Prak\GambitLib\obj\Debug\GambitLib.csproj.AssemblyReference.cache
+C:\Users\Gambit\source\repos\49-50 Prak\GambitLib\obj\Debug\GambitLib.csproj.CoreCompileInputs.cache
+C:\Users\Gambit\source\repos\49-50 Prak\GambitLib\obj\Debug\GambitLib.dll
+C:\Users\Gambit\source\repos\49-50 Prak\GambitLib\obj\Debug\GambitLib.pdb

@@ -28,5 +28,23 @@
       <OperationCode_>2</OperationCode_>
       <Other_>amoskin515@gmail.com</Other_>
     </Operation>
+    <Operation>
+      <Id_>3</Id_>
+      <Articul_>2</Articul_>
+      <Prihod_Rashod_>2023-06-12T21:36:15.880774+07:00</Prihod_Rashod_>
+      <Cost_>2</Cost_>
+      <Kolvo_>2</Kolvo_>
+      <OperationCode_>1</OperationCode_>
+      <Other_>3</Other_>
+    </Operation>
+    <Operation>
+      <Id_>4</Id_>
+      <Articul_>5</Articul_>
+      <Prihod_Rashod_>2023-06-12T21:52:45.1433487+07:00</Prihod_Rashod_>
+      <Cost_>5</Cost_>
+      <Kolvo_>5</Kolvo_>
+      <OperationCode_>1</OperationCode_>
+      <Other_>3</Other_>
+    </Operation>
   </Operation_list>
 </Operations>

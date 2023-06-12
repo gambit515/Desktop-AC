@@ -24,6 +24,7 @@ namespace _49_50_Prak
         Tovars tovars = new Tovars();
         string Email;
         string Name;
+        int indexLVIHistory =0;
         public Main(string email,string name)
         {
             InitializeComponent();
@@ -97,7 +98,8 @@ namespace _49_50_Prak
             if (File.Exists("Tovars.xml"))
                 Refresh(tovars);
             else Tovars.SerializeXML(tovars);
-            
+            HistoryRefresh();
+
         }
         private void getInfoPicture(PictureBox pictureBox)
         {
@@ -284,6 +286,49 @@ namespace _49_50_Prak
                 }
             }
         }
+        private void HistoryRefresh(DateTime dt, int articul)
+        {
+            listViewHistory.Items.Clear();
+            foreach (Operation operation in operations.Operation_list)
+            {
+                if(operation.Articul_ == articul)
+                    if (DateVivod(operation.Prihod_Rashod_) == DateVivod(dt))
+                        if (operation.Other_ == Email)
+                        {
+                            ListViewItem LVI = new ListViewItem(SearchTovar(operation.Articul_).Name_);
+                            LVI.Tag = operation;
+                            listViewHistory.Items.Add(LVI);
+                        }
+            }
+        }
+        private void HistoryRefresh(int articul)
+        {
+            listViewHistory.Items.Clear();
+            foreach (Operation operation in operations.Operation_list)
+            {
+                if (operation.Articul_ == articul)
+                       if (operation.Other_ == Email)
+                        {
+                            ListViewItem LVI = new ListViewItem(SearchTovar(operation.Articul_).Name_);
+                            LVI.Tag = operation;
+                            listViewHistory.Items.Add(LVI);
+                        }
+            }
+        }
+        private void HistoryRefresh(DateTime dt)
+        {
+            listViewHistory.Items.Clear();
+            foreach (Operation operation in operations.Operation_list)
+            {
+                    if (DateVivod(operation.Prihod_Rashod_) == DateVivod(dt))
+                        if (operation.Other_ == Email)
+                        {
+                            ListViewItem LVI = new ListViewItem(SearchTovar(operation.Articul_).Name_);
+                            LVI.Tag = operation;
+                            listViewHistory.Items.Add(LVI);
+                        }
+            }
+        }
         private Tovar SearchTovar(int articul)
         {
             foreach(Tovar tovar in tovars.Tovar_list)
@@ -293,5 +338,82 @@ namespace _49_50_Prak
             }
             return null;
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            LoadPictures();
+        }
+
+        private void listViewHistory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewHistory.SelectedItems.Count == 1)
+            {
+                Operation operation = (Operation)listViewHistory.SelectedItems[0].Tag;
+                if (operation != null)
+                {
+                    textBoxHistoryData1.Text = operation.Prihod_Rashod_.ToString();
+                    textBoxHistoryData2.Text = operation.Articul_.ToString();
+                    textBoxHistoryData3.Text = operation.Kolvo_.ToString();
+                }
+            }
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                dateTimePicker1.Enabled= true;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem LVI in listViewHistory.Items)
+                LVI.Selected= false;
+            
+            foreach (ListViewItem LVI in listViewHistory.Items)
+            {
+                if (LVI.Text.IndexOf(textBoxHistorySearch1.Text) != -1)
+                {
+                    LVI.Selected = true;
+                    listViewHistory.Select();
+                    break;
+                }
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked && textBoxHistoryFilter1.Text != String.Empty)
+                HistoryRefresh(dateTimePicker1.Value,int.Parse(textBoxHistoryFilter1.Text));
+            else if(textBoxHistoryFilter1.Text != String.Empty)
+                HistoryRefresh(int.Parse(textBoxHistoryFilter1.Text));
+                else if (checkBox1.Checked)
+                HistoryRefresh(dateTimePicker1.Value);
+        }
+        private string DateVivod(DateTime DT)
+        {
+            string str = "";
+            str = +DT.Day + "/" + DT.Month + "/" + DT.Year;
+            return str;
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
+
     }
 }

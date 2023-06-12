@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using static System.Collections.Specialized.BitVector32;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace _49_50_Prak
 {
@@ -56,7 +57,21 @@ namespace _49_50_Prak
                 }
             }
         }
-        private void Refresh(Operations op, string searchingSTR) //Обновление ListView2
+        //private void Refresh(Operations op, string searchingSTR) //Обновление ListView2
+        //{
+        //    if (File.Exists("Operations.xml"))
+        //    {
+        //        listView2.Clear();
+        //        operations = Operations.DeserializeXML();
+        //        foreach (Operation operation in operations.Operation_list)
+        //        {
+        //            if ((operation.Articul_.ToString() + " " + DateVivod(operation.Prihod_Rashod_)).ToString().IndexOf(searchingSTR)!=-1)
+        //            Add(operation);
+        //        }
+        //    }
+        //}
+        //private void Refresh(Operations op, string searchingSTR, string ProviderNumber) //Обновление ListView2
+        private void Refresh(Operations op, string ProviderNumber)
         {
             if (File.Exists("Operations.xml"))
             {
@@ -64,27 +79,19 @@ namespace _49_50_Prak
                 operations = Operations.DeserializeXML();
                 foreach (Operation operation in operations.Operation_list)
                 {
-                    if ((operation.Articul_.ToString() + " " + DateVivod(operation.Prihod_Rashod_)).ToString().IndexOf(searchingSTR)!=-1)
-                    Add(operation);
-                }
-            }
-        }
-        private void Refresh(Operations op, string searchingSTR, string ProviderNumber) //Обновление ListView2
-        {
-            if (File.Exists("Operations.xml"))
-            {
-                listView2.Clear();
-                operations = Operations.DeserializeXML();
-                foreach (Operation operation in operations.Operation_list)
-                {
-                    if ((operation.Articul_.ToString() + " " + DateVivod(operation.Prihod_Rashod_)).ToString().IndexOf(searchingSTR) != -1)
-                        if (operation.OperationCode_ == 0)
-                        if(operation.Other_ == ProviderNumber)
+                    if(ProviderNumber != String.Empty && operation.OperationCode_ == 1 && operation.Other_ == ProviderNumber)
+                        Add(operation);
+                    else
+                        if (ProviderNumber == String.Empty)
                             Add(operation);
+                    //if (operation.OperationCode_ == 0)
+                    // if(operation.Other_ == ProviderNumber)
+                    //   Add(operation);
                 }
             }
         }
-        private void Refresh(Operations op, string searchingSTR, DateTime FirstDate, DateTime SecondDate) //Обновление ListView2
+        //private void Refresh(Operations op, string searchingSTR, DateTime FirstDate, DateTime SecondDate) //Обновление ListView2
+        private void Refresh(Operations op, DateTime FirstDate, DateTime SecondDate) //Обновление ListView2
         {
             if (File.Exists("Operations.xml"))
             {
@@ -92,13 +99,14 @@ namespace _49_50_Prak
                 operations = Operations.DeserializeXML();
                 foreach (Operation operation in operations.Operation_list)
                 {
-                    if ((operation.Articul_.ToString() + " " + DateVivod(operation.Prihod_Rashod_)).ToString().IndexOf(searchingSTR) != -1)
+                    //if ((operation.Articul_.ToString() + " " + DateVivod(operation.Prihod_Rashod_)).ToString().IndexOf(searchingSTR) != -1)
                         if (operation.Prihod_Rashod_.IsInRange(FirstDate, SecondDate))
                         Add(operation);
                 }
             }
         }
-        private void Refresh(Operations op, string searchingSTR, string ProviderNumber, DateTime FirstDate, DateTime SecondDate) //Обновление ListView2
+        //private void Refresh(Operations op, string searchingSTR, string ProviderNumber, DateTime FirstDate, DateTime SecondDate) //Обновление ListView2
+        private void Refresh(Operations op, string ProviderNumber, DateTime FirstDate, DateTime SecondDate) //Обновление ListView2
         {
             if (File.Exists("Operations.xml"))
             {
@@ -106,11 +114,19 @@ namespace _49_50_Prak
                 operations = Operations.DeserializeXML();
                 foreach (Operation operation in operations.Operation_list)
                 {
-                    if ((operation.Articul_.ToString() + " " + DateVivod(operation.Prihod_Rashod_)).ToString().IndexOf(searchingSTR) != -1)
+                    //if ((operation.Articul_.ToString() + " " + DateVivod(operation.Prihod_Rashod_)).ToString().IndexOf(searchingSTR) != -1)
                         if (operation.Prihod_Rashod_.IsInRange(FirstDate,SecondDate))
-                        if (operation.OperationCode_ == 0)
-                            if (operation.Other_ == ProviderNumber)
-                                Add(operation);
+                        if (ProviderNumber != String.Empty)
+                        {
+                            if (operation.OperationCode_ == 1)
+                                if (operation.Other_ == ProviderNumber)
+                                    Add(operation);
+                        }
+                        else
+                        {
+                            Add(operation);
+                        } 
+                            
                 }
             }
         }
@@ -126,7 +142,21 @@ namespace _49_50_Prak
                 }
             }
         }
-        private void Refresh(Tovars to,string searchingSTR) //Обновление ListView3
+        //private void Refresh(Tovars to,string searchingSTR) //Обновление ListView3
+        //{
+        //    if (File.Exists("Tovars.xml"))
+        //    {
+        //        listView3.Clear();
+        //        tovars = Tovars.DeserializeXML();
+        //        foreach (Tovar tovar in tovars.Tovar_list)
+        //        {
+        //            if(tovar.Name_.IndexOf(searchingSTR) !=-1)
+        //                Add(tovar);
+        //        }
+        //    }
+        //}
+        //private void Refresh(Tovars to, string searchingSTR, int MinOst, int MaxOst) //Обновление ListView3
+            private void Refresh(Tovars to, int MinOst, int MaxOst) //Обновление ListView3
         {
             if (File.Exists("Tovars.xml"))
             {
@@ -134,21 +164,9 @@ namespace _49_50_Prak
                 tovars = Tovars.DeserializeXML();
                 foreach (Tovar tovar in tovars.Tovar_list)
                 {
-                    if(tovar.Name_.IndexOf(searchingSTR) !=-1)
-                        Add(tovar);
-                }
-            }
-        }
-        private void Refresh(Tovars to, string searchingSTR, int MinOst, int MaxOst) //Обновление ListView3
-        {
-            if (File.Exists("Tovars.xml"))
-            {
-                listView3.Clear();
-                tovars = Tovars.DeserializeXML();
-                foreach (Tovar tovar in tovars.Tovar_list)
-                {
-                    if (tovar.Name_.IndexOf(searchingSTR) != -1 && (tovar.CostRoznicha_ >= MinOst && tovar.CostRoznicha_ <= MaxOst))
-                        Add(tovar);
+                    //if (tovar.Name_.IndexOf(searchingSTR) != -1 && (tovar.CostRoznicha_ >= MinOst && tovar.CostRoznicha_ <= MaxOst))
+                        if ((tovar.CostRoznicha_ >= MinOst && tovar.CostRoznicha_ <= MaxOst))
+                            Add(tovar);
                 }
             }
         }
@@ -164,7 +182,21 @@ namespace _49_50_Prak
                 }
             }
         }
-        private void Refresh(Providers pr, string searchingSTR) //Обновление ListView4
+        //private void Refresh(Providers pr, string searchingSTR) //Обновление ListView4
+        //{
+        //    if (File.Exists("Providers.xml"))
+        //    {
+        //        listView4.Clear();
+        //        providers = Providers.DeserializeXML();
+        //        foreach (Provider provider in providers.Provider_list)
+        //        {
+        //            if (provider.FIO_.IndexOf(searchingSTR) != -1)
+        //                Add(provider);
+        //        }
+        //    }
+        //}
+        //private void Refresh(Providers pr, string searchingSTR, string filterSTR) //Обновление ListView4
+        private void Refresh(Providers pr,string filterSTR) //Обновление ListView4
         {
             if (File.Exists("Providers.xml"))
             {
@@ -172,21 +204,9 @@ namespace _49_50_Prak
                 providers = Providers.DeserializeXML();
                 foreach (Provider provider in providers.Provider_list)
                 {
-                    if (provider.FIO_.IndexOf(searchingSTR) != -1)
-                        Add(provider);
-                }
-            }
-        }
-        private void Refresh(Providers pr, string searchingSTR, string filterSTR) //Обновление ListView4
-        {
-            if (File.Exists("Providers.xml"))
-            {
-                listView4.Clear();
-                providers = Providers.DeserializeXML();
-                foreach (Provider provider in providers.Provider_list)
-                {
-                    if (provider.FIO_.IndexOf(searchingSTR) != -1 && provider.City_.IndexOf(filterSTR) != -1)
-                        Add(provider);
+                    //if (provider.FIO_.IndexOf(searchingSTR) != -1 && provider.City_.IndexOf(filterSTR) != -1)
+                        if (provider.City_.IndexOf(filterSTR) != -1)
+                            Add(provider);
                 }
             }
         }
@@ -611,38 +631,224 @@ namespace _49_50_Prak
             if (File.Exists("Tovars.xml"))
                 Refresh(tovars);
             else Tovars.SerializeXML(tovars);
+            StatisticRefresh();
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            if (textBoxTovarFilter1.Text != string.Empty && textBoxTovarFilter2.Text != string.Empty)
-                Refresh(tovars, textBoxTovarSearch.Text,int.Parse(textBoxTovarFilter1.Text),int.Parse(textBoxTovarFilter2.Text));
-            else
-                Refresh(tovars, textBoxTovarSearch.Text);
+            //if (textBoxTovarFilter1.Text != string.Empty && textBoxTovarFilter2.Text != string.Empty)
+                //Refresh(tovars, textBoxTovarSearch.Text,int.Parse(textBoxTovarFilter1.Text),int.Parse(textBoxTovarFilter2.Text));
+            Refresh(tovars, int.Parse(textBoxTovarFilter1.Text), int.Parse(textBoxTovarFilter2.Text));
+            //else
+            // Refresh(tovars, textBoxTovarSearch.Text);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked && textBoxOperationFilter3.Text != string.Empty)
-                Refresh(operations, textBoxOperationSearch.Text, textBoxOperationFilter3.Text, dateTimePicker1.Value, dateTimePicker2.Value);
+            //if (checkBox1.Checked && textBoxOperationFilter3.Text != string.Empty)
+            if (checkBox1.Checked)
+            Refresh(operations, textBoxOperationFilter3.Text, dateTimePicker1.Value, dateTimePicker2.Value);
             else
-                if (checkBox1.Checked)
-                Refresh(operations, textBoxOperationSearch.Text, dateTimePicker1.Value, dateTimePicker2.Value);
-            else
-                if (textBoxOperationFilter3.Text != string.Empty)
-                Refresh(operations, textBoxOperationSearch.Text, textBoxOperationFilter3.Text);
-            else
-                Refresh(operations, textBoxOperationSearch.Text);
+                Refresh(operations, textBoxOperationFilter3.Text);
+            //else
+            //    if (checkBox1.Checked)
+            //    Refresh(operations, textBoxOperationSearch.Text, dateTimePicker1.Value, dateTimePicker2.Value);
+            //else
+            //    if (textBoxOperationFilter3.Text != string.Empty)
+            //    Refresh(operations, textBoxOperationSearch.Text, textBoxOperationFilter3.Text);
+            //else
+            //    Refresh(operations, textBoxOperationSearch.Text);
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            if (comboBoxProviderFilter.Text != string.Empty)
-                Refresh(providers, textBoxProviderSearch.Text,comboBoxProviderFilter.Text);
-            else
-                Refresh(providers,textBoxProviderSearch.Text);
+            //if (comboBoxProviderFilter.Text != string.Empty)
+                //Refresh(providers, textBoxProviderSearch.Text,comboBoxProviderFilter.Text);
+            Refresh(providers,comboBoxProviderFilter.Text);
+            //else
+            //Refresh(providers,textBoxProviderSearch.Text);
         }
-        
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem LVI in listView4.Items)
+                LVI.Selected = false;
+
+            foreach (ListViewItem LVI in listView4.Items)
+            {
+                if (LVI.Text.IndexOf(textBoxProviderSearch.Text) != -1)
+                {
+                    LVI.Selected = true;
+                    listView4.Select();
+                    break;
+                }
+            }
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem LVI in listView3.Items)
+                LVI.Selected = false;
+
+            foreach (ListViewItem LVI in listView3.Items)
+            {
+                if (LVI.Text.IndexOf(textBoxTovarSearch.Text) != -1)
+                {
+                    LVI.Selected = true;
+                    listView3.Select();
+                    break;
+                }
+            }
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            
+                foreach (ListViewItem LVI in listView2.Items)
+                    LVI.Selected = false;
+
+            foreach (ListViewItem LVI in listView2.Items)
+            {
+                if (LVI.Text.IndexOf(textBoxOperationSearch.Text) != -1)
+                {
+                    LVI.Selected = true;
+                    listView2.Select();
+                    break;
+                }
+            }
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            StatisticRefresh(textBoxFilter1.Text, textBoxFilter2.Text, dateTimePicker3.Value, dateTimePicker4.Value);
+        }
+        private Tovar SearchTovar(int articul)
+        {
+            foreach (Tovar tovar in tovars.Tovar_list)
+            {
+                if (tovar.Articul_ == articul)
+                    return tovar;
+            }
+            return null;
+        }
+        private void StatisticRefresh()
+        {
+            listView5.Items.Clear();
+            foreach (Operation operation in operations.Operation_list)
+            {
+                if(operation.OperationCode_== 2)
+                {
+                    ListViewItem LVI = new ListViewItem(SearchTovar(operation.Articul_).Name_);
+                    LVI.Tag = operation;
+                    listView5.Items.Add(LVI);
+                }
+                    
+            }
+        }
+        private void StatisticRefresh(string articul, string email, DateTime FirstDate, DateTime SecondDate)
+        {
+            listView5.Items.Clear();
+            foreach (Operation operation in operations.Operation_list)
+            {
+                if (operation.OperationCode_ == 2)
+                {
+                    if(articul == string.Empty)
+                    {
+                        if(email == string.Empty)
+                        {
+                            if (!checkBox2.Checked)
+                            {
+                                ListViewItem LVI = new ListViewItem(SearchTovar(operation.Articul_).Name_);
+                                LVI.Tag = operation;
+                                listView5.Items.Add(LVI);
+                            }
+                            else if (operation.Prihod_Rashod_.IsInRange(FirstDate, SecondDate))
+                            {
+                                ListViewItem LVI = new ListViewItem(SearchTovar(operation.Articul_).Name_);
+                                LVI.Tag = operation;
+                                listView5.Items.Add(LVI);
+                            }
+
+                        }
+                        else if(email == operation.Other_)
+                        {
+                            if(!checkBox2.Checked)
+                            {
+                                ListViewItem LVI = new ListViewItem(SearchTovar(operation.Articul_).Name_);
+                                LVI.Tag = operation;
+                                listView5.Items.Add(LVI);
+                            }
+                            else if (operation.Prihod_Rashod_.IsInRange(FirstDate, SecondDate))
+                            {
+                                ListViewItem LVI = new ListViewItem(SearchTovar(operation.Articul_).Name_);
+                                LVI.Tag = operation;
+                                listView5.Items.Add(LVI);
+                            }
+                        }
+
+
+                    }
+                    else
+                    {
+                        if(articul == operation.Articul_.ToString())
+                        {
+                            if (email == string.Empty)
+                            {
+                                if (!checkBox2.Checked)
+                                {
+                                    ListViewItem LVI = new ListViewItem(SearchTovar(operation.Articul_).Name_);
+                                    LVI.Tag = operation;
+                                    listView5.Items.Add(LVI);
+                                }
+                                else if (operation.Prihod_Rashod_.IsInRange(FirstDate, SecondDate))
+                                {
+                                    ListViewItem LVI = new ListViewItem(SearchTovar(operation.Articul_).Name_);
+                                    LVI.Tag = operation;
+                                    listView5.Items.Add(LVI);
+                                }
+
+                            }
+                            else if (email == operation.Other_)
+                            {
+                                if (!checkBox2.Checked)
+                                {
+                                    ListViewItem LVI = new ListViewItem(SearchTovar(operation.Articul_).Name_);
+                                    LVI.Tag = operation;
+                                    listView5.Items.Add(LVI);
+                                }
+                                else if (operation.Prihod_Rashod_.IsInRange(FirstDate, SecondDate))
+                                {
+                                    ListViewItem LVI = new ListViewItem(SearchTovar(operation.Articul_).Name_);
+                                    LVI.Tag = operation;
+                                    listView5.Items.Add(LVI);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        private void listView5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView5.SelectedItems.Count == 1)
+            {
+                Operation operation = (Operation)listView5.SelectedItems[0].Tag;
+                if (operation != null)
+                {
+                    textBoxStatistic1.Text = operation.Prihod_Rashod_.ToString();
+                    textBoxStatistic2.Text = operation.Articul_.ToString();
+                    textBoxStatistic3.Text = operation.Kolvo_.ToString();
+                    textBoxStatistic4.Text = operation.Other_.ToString();
+                }
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     public static class DateTimeExtensions
     {
